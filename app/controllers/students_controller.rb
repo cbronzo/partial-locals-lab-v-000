@@ -22,7 +22,6 @@ class StudentsController < ApplicationController
 
   def index
     if params[:query]
-      binding.pry
       @students = Student.search(params[:query])
     else
       @students = Student.all
